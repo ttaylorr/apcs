@@ -15,4 +15,10 @@ public class LoudDog extends Dog {
 		return toReturn.toString();
 	}
 	
+	public String speakAP() {
+		// This is a canonical solution:
+		
+		return super.speak() + " " + super.speak();
+	}
+	
 }

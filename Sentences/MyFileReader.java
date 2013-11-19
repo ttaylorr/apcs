@@ -28,6 +28,8 @@ public class MyFileReader {
 					System.out.println(all);
 					
 					all.replace((CharSequence)".  ", (CharSequence)". ");
+					all.replace((CharSequence)"!  ", (CharSequence)"! ");
+					all.replace((CharSequence)"?  ", (CharSequence)"? ");
 					all.trim();
 					
 					sentences = all.split("(\\S.+?[.!?])(?=\\s+|$)").length;

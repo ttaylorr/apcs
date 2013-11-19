@@ -16,7 +16,7 @@ public class MyFileReader {
 
 		try {
 			in = new BufferedReader(new FileReader(
-					"C:\\Users\\TBLAU16\\workspace\\FileReader\\test.txt"));
+					"./myfile.txt"));
 
 			while (true) {
 				if (in.ready()) {
@@ -27,9 +27,10 @@ public class MyFileReader {
 					// done.
 					System.out.println(all);
 					
-					all.replace((CharSequence)".  ", (CharSequence)". ");
-					all.replace((CharSequence)"!  ", (CharSequence)"! ");
-					all.replace((CharSequence)"?  ", (CharSequence)"? ");
+					all.replace(".  ", ". ");
+					all.replace("!  ", "! ");
+					all.replace("?  ", "? ");
+					all.replace("-", "");
 					all.trim();
 					
 					sentences = all.split("(\\S.+?[.!?])(?=\\s+|$)").length;
@@ -48,7 +49,6 @@ public class MyFileReader {
 
 			in.close();
 		} catch (IOException e) {
-			System.err.println("wat");
 			e.printStackTrace();
 		}
 	}

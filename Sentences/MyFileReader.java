@@ -2,9 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MyFileReader {
+@Author(name = "Taylor Blau")
+@Author(name = "Miranda Weismantel")
+@Author(name = "Jack Townsend")
 
-	// Author: Taylor and Miranda and StackOverflow
+public class MyFileReader {
 
 	public static void main(String[] args) {
 		BufferedReader in;
